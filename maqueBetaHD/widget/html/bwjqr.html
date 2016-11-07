@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="api.css" />
+    <link rel="stylesheet" type="text/css" href="aui.css" />
+    <link rel="stylesheet" type="text/css" href="ionic.css" />
+    <style type="text/css">
+    html,body{
+        height: 100%;background: #dddddd
+    }
+    #wrap{
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-flex-flow: column;
+               flex-flow: column;
+    }
+    #header{
+        text-align: center; background-color: #4585d7; color: #fff;position:relative;
+        width: 100%;
+    }
+    #header h1{
+        font-size: 20px; height: 44px; line-height: 44px; margin: 0em; color: #fff;
+    }
+    #main{
+        -webkit-box-flex: 1; 
+        -webkit-flex: 1;
+        flex: 1;
+    }
+    #footer{
+        height: 30px; line-height: 30px;
+        width: 100%;
+        text-align: center;
+    }
+    #footer h5{
+        color: #666;
+    }
+    i {
+    font-size: 18px !important;
+    position: absolute !important;
+    left: 13px;
+}
+    .con{font-size: 28px; text-align: center;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+<!--        <div id="header">-->
+<!--            <h1>-->
+<!--            	<i class="aui-iconfont aui-icon-left" onclick="api.closeWin();" tapmode=""></i>-->
+<!--            	<span class="_title">游戏设置</span>-->
+<!--            	<span style="font-size:0.9em;font-weight:500;position: absolute;right:1em;" onclick="api.openWin({name:'jihuo', url:'jihuo.html'});" tapmode="">授权</span>-->
+<!--            </h1>-->
+<!--            -->
+<!--        </div>-->
+        <div id="main">
+        	<div style="width: 100%;background: white;margin-top: 0.4em">
+	        	<div style="width: 90%;padding: 0.5em 0.5em;height: 3.5em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 2em;">麻游助手</span>
+		        	<select style="width: 70%;float:right;border-radius:0.5em;height: 2.5em;padding: 0 0.5em"  >
+		                  <option  value="">呱呱游戏平台</option>
+		                  <option  value="">闲来游戏平台</option>
+		                  <option  value="">逍遥游戏平台</option>
+		                  <option  value="">皮皮游戏平台</option>
+		                  <option  value="">土豪游戏平台</option>
+		                  <option  value="">熊猫游戏平台</option>
+		                  <option  value="">龙宇游戏平台</option>
+		                  <option  value="">丫丫游戏平台</option>
+		                  <option  value="">红中游戏平台</option> 		                             
+		            </select>
+		        </div>
+	        </div>
+	        <div style="width: 100%;background: white;margin-top: 1em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3.5em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 2em;">连接ID：</span>
+		    		<input type="tel" style="width: 70%;float:right;border-radius:0.5em;height: 2.5em;margin-left:2em;border: 1px solid #ddd " placeholder="请输入您的授权ID号"/>    
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;margin-top: 5em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">防封号</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">防检测</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">全能机器人</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">机器人智能托管</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">强制禁止别人开挂</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	
+        	
+	       <p style="color: red;margin-left:0.3em;margin-top: 3em;font-size: 1.5em">使用说明:</p>
+	       <p style="font-size: 1.1em;margin-top:1em;margin-left: 0.7em">开启以上功能，手机会增加耗电，请注意电量状态</p>
+	    
+    </div>
+</body>
+<script type="text/javascript" src="api.js"></script>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+     //$("._title").text(api.pageParam.id);
+      apiready = function(){
+        var header = $api.byId('header');
+        //适配iOS 7+，Android 4.4+状态栏
+        $api.fixStatusBar(header);
+     
+
+    };
+</script>
+</html>

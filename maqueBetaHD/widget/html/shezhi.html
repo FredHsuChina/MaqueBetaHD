@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="api.css" />
+    <link rel="stylesheet" type="text/css" href="aui.css" />
+    <link rel="stylesheet" type="text/css" href="ionic.css" />
+    <style type="text/css">
+    html,body{
+        height: 100%;background:#dddddd
+    }
+    #wrap{
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-flex-flow: column;
+               flex-flow: column;
+    }
+<!--    #header{-->
+<!--        text-align: center; background-color: #4585d7; color: #fff;position:relative;-->
+<!--        width: 100%;-->
+<!--    }-->
+<!--    #header h1{-->
+<!--        font-size: 20px; height: 44px; line-height: 44px; margin: 0em; color: #fff;-->
+<!--    }-->
+    #main{
+        -webkit-box-flex: 1; 
+        -webkit-flex: 1;
+        flex: 1;
+    }
+    #footer{
+        height: 30px; line-height: 30px;
+        width: 100%;
+        text-align: center;
+    }
+    #footer h5{
+        color: #666;
+    }
+    i {
+    font-size: 18px !important;
+    position: absolute !important;
+    left: 13px;
+}
+    .con{font-size: 28px; text-align: center;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+<!--        <div id="header">-->
+<!--            <h1>-->
+<!--            	<i class="aui-iconfont aui-icon-left" onclick="api.closeWin();" tapmode=""></i>-->
+<!--            	<span class="_title">游戏设置</span>-->
+<!--            	<span style="font-size:0.9em;font-weight:500;position: absolute;right:1em;" onclick="api.openWin({name:'jihuo', url:'jihuo.html'});" tapmode="">授权</span>-->
+<!--            </h1>-->
+<!--            -->
+<!--        </div>-->
+        <div id="main">
+        	<div style="width: 100%;background: white;margin-top: 0.4em">
+	        	<div style="width: 90%;padding: 0.5em 0.5em;height: 3.5em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 2em;">选择类型</span>
+		        	<select style="width: 75%;float:right;border-radius:0.5em;height: 2.5em;padding: 0 0.5em;float:right"  >
+		                  <option  value="">转转麻将</option>
+		                  <option  value="">广东麻将</option>
+		                  <option  value="">湖南麻将</option>
+		                  <option  value="">湖北麻将</option>
+		                  <option  value="">四川麻将</option>
+		                  <option  value="">成都麻将</option>
+		                  <option  value="">武汉麻将</option>
+		                  <option  value="">宁夏麻将</option>
+		                  <option  value="">长沙麻将</option>
+		                  <option  value="">邵阳麻将</option>		                  
+		                  <option  value="">贵阳麻将</option>
+		                  <option  value="">江西麻将</option>
+		                  <option  value="">陕西麻将</option>
+		                  <option  value="">南昌麻将</option>
+		                  <option  value="">合肥麻将</option>
+		                  <option  value="">郑州麻将</option>
+		                  <option  value="">襄阳麻将</option>
+		                  <option  value="">平江麻将</option>		                             
+		            </select>
+		        </div>
+	        </div>
+	        <div style="width: 100%;background: white;margin-top: 1em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3.5em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 2em;">连接ID</span>
+		    		<input style="width: 75%;float:right;border-radius:0.5em;height: 2.5em;border: 1px solid #ddd;" type="tel" placeholder="请输入您的游戏ID号"/>    
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;margin-top: 0.4em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">透视上家</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;margin-top: 0.4em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">透视对家</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;margin-top: 0.4em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">透视下家</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;margin-top: 1em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">智能出牌</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;margin-top: 0.4em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">防点炮</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>
+	    	<div style="width: 100%;background: white;margin-top: 0.4em;border: 1px solid #ddd">
+	    		<div style="width: 90%;padding: 0.5em 0.5em;height: 3em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 1.8em;">防杠</span>
+			    	<div style="float:right ">
+			    		<label class="toggle toggle-balanced">
+				              <input type="checkbox">
+				              <div class="track">
+				                <div class="handle"></div>
+				              </div>
+						</label>
+					</div>	
+	    		</div>
+	    	</div>	    	
+        	<div style="width: 100%;background: white;margin-top: 1em">
+	        	<div style="width: 90%;padding: 0.5em 0.5em;height: 3.5em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 2em;">选择类型</span>
+		        	<select style="width: 75%;float: right;border-radius:0.5em;height: 2.5em;  padding: 0 0.5em;float:right"  >
+		                  <option  value="">好牌几率10%</option>
+		                  <option  value="">好牌几率20%</option>
+		                  <option  value="">好牌几率30%</option>
+		                  <option  value="">好牌几率40%</option>
+		                  <option  value="">好牌几率50%</option>
+		                  <option  value="">好牌几率60%</option>
+		                  <option  value="">好牌几率70%</option>
+		                  <option  value="">好牌几率80%</option>
+		                  <option  value="">好牌几率90%</option>
+		                  <option  value="">好牌几率100%</option>
+		                  	                             
+		            </select>
+		        </div>
+	        </div>	
+        	<div style="width: 100%;background: white;margin-top: 0.4em">
+	        	<div style="width: 90%;padding: 0.5em 0.5em;height: 3.5em;margin: auto;">
+		        	<span style="float:left;font-size:1.1em;line-height: 2em;">选择类型</span>
+		        	<select style="width: 75%;float:right;border-radius:0.5em;height: 2.5em;  padding: 0 0.5em;float:right"  >
+		                  <option  value="">自摸几率10%</option>
+		                  <option  value="">自摸几率20%</option>
+		                  <option  value="">自摸几率30%</option>
+		                  <option  value="">自摸几率40%</option>
+		                  <option  value="">自摸几率50%</option>
+		                  <option  value="">自摸几率60%</option>
+		                  <option  value="">自摸几率70%</option>
+		                  <option  value="">自摸几率80%</option>
+		                  <option  value="">自摸几率90%</option>
+		                  <option  value="">自摸几率100%</option>	                  		                                              
+		            </select>
+		        </div>
+	        </div>
+	        <div onclick="qidong();" tapmode="" style="width: 35%;height: 2.3em;line-height: 1.2em;margin: auto;text-align: center;color: blue;font-size: 1.5em;border: 2px solid blue;margin-top: 1em;border-radius: 0.5em;padding: 0.4em;">
+	          	启动游戏
+	        </div>
+	        <p style="font-size: 0.5em;color:red;margin-top:1em">温馨提示：请把握次数，低调娱乐！</p>
+	    
+    </div>
+</body>
+<script type="text/javascript" src="api.js"></script>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+   //$("._title").text(api.pageParam.id);
+    apiready = function(){
+        var header = $api.byId('header');
+        //适配iOS 7+，Android 4.4+状态栏
+        $api.fixStatusBar(header);
+     
+
+    };
+   
+   function jihuo(){
+    	api.confirm({
+		    title: '雀神',
+		    msg: '是否确定启动游戏?',
+		    buttons: ['确定', '取消']
+		}, function(ret, err){
+		    if( ret ){
+		    	if(ret["buttonIndex"] == '1'){
+		    		setTimeout(function(){
+		    		    alert("启动成功！");
+		    		},1000);
+		    	}
+		    }else{
+		        return;
+		    }
+		});
+    }
+</script>
+</html>
